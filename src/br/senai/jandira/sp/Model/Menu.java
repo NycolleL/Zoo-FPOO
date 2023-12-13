@@ -6,6 +6,10 @@ public class Menu {
     Scanner scanner = new Scanner(System.in);
     Ave refAve = new Ave();
     Alojamento alojamento = new Alojamento();
+    Mamifero refMamifero = new Mamifero();
+    Felino refFelino = new Felino();
+
+
     public void executarMenu() {
 
             boolean continuar = true;
@@ -28,7 +32,7 @@ public class Menu {
                     case 1:
                         System.out.println("1 - Mamífero");
                         System.out.println("2- Ave      ");
-                        System.out.println("3- Feino    ");
+                        System.out.println("3- Felino    ");
                         System.out.println("Escolha qual deseja cadastrar:");
 
                         int optionCadastro = scanner.nextInt();
@@ -37,6 +41,9 @@ public class Menu {
 
                         switch (optionCadastro) {
                             case 1:
+                                Mamifero mamifero = new Mamifero();
+                                mamifero.CadastrarAnimal();
+                                refMamifero.adicionarMamifero(mamifero);
                                 break;
                             case 2:
                                 Ave ave = new Ave();
@@ -45,6 +52,9 @@ public class Menu {
                                 alojamento.adicionarAveAlojamento(ave);
                                 break;
                             case 3:
+                                Felino felino = new Felino();
+                                felino.CadastrarAnimal();
+                                refFelino.adicionarFelino(felino);
                                 break;
                             case 4:
                                 break;
